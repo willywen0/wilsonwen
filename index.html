@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>東山的網頁</title>
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" integrity="sha512-XcIsjKMcuVe0Ucj/xgIXQnytNwBttJbNjltBV18IOnru2lDPe9KRRyvCXw6Y5H415vbBLRm8+q6fmLUU7DfO6Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- ====== Header ====== -->
+    <header class="sticky top-0 z-50 bg-neutral-50/90">
+        <div class="container">
+            <div class="relative h-[70px] flex items-center justify-between">
+                <!-- logo -->
+                <a href="#">
+                    <div class="flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8 text-sky-700">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z" />
+                        </svg>
+                        <p class="font-extrabold text-3xl text-sky-700 ml-2">東山</p>  
+                        
+                    </div>
+                </a>
+                    
+
+                <!-- nav menu absolute left-0 top-10 w-full z-10 -->
+                <div id="nav-menu" class="hidden absolute top-[80px] right-0 w-full max-w-sm lg:static lg:block ">
+                    <nav class=" flex flex-col gap-5 py-10 font-bold text-lg bg-neutral-50 rounded-b-lg shadow-lg lg:flex-row lg:py-0 lg:shadow-none">
+                        <a class="nav_link" href="#features">摺紙</a>
+                        <a class="nav_link" href="#about">風箏</a>
+                        <a class="nav_link" href="#services">影劇</a>
+                        <a class="nav_link" href="#faq">科學</a>
+                        <a class="nav_link" href="#portfolio">亞洲</a>
+                        <!-- <a class="nav_link" href="#">英語</a> -->
+                        <a class="nav_link" href="#contact">聯繫</a>
+                    </nav>
+                </div>
+
+                <!-- register/hamburger icon -->
+                <div class="flex items-center gap-5">
+                    <button class="hidden py-2 px-6 bg-sky-500 hover:bg-sky-600 text-sky-50 font-bold rounded-full sm:block">
+                        <div class="flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 4.875c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5A1.125 1.125 0 0 1 3.75 9.375v-4.5ZM3.75 14.625c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5a1.125 1.125 0 0 1-1.125-1.125v-4.5ZM13.5 4.875c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5A1.125 1.125 0 0 1 13.5 9.375v-4.5Z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 6.75h.75v.75h-.75v-.75ZM6.75 16.5h.75v.75h-.75v-.75ZM16.5 6.75h.75v.75h-.75v-.75ZM13.5 13.5h.75v.75h-.75v-.75ZM13.5 19.5h.75v.75h-.75v-.75ZM19.5 13.5h.75v.75h-.75v-.75ZM19.5 19.5h.75v.75h-.75v-.75ZM16.5 16.5h.75v.75h-.75v-.75Z" />
+                            </svg>
+                            <p>QR-Code</p>
+                        </div>
+                            
+                              
+                        </button>
+                    
+                    <button id="hamburger-icon" class="lg:hidden"><i class="ri-menu-add-fill text-3xl "></i></button>
+
+                    <button id="close-icon" class="hidden"><i class="ri-close-large-line text-3xl "></i></button>
+                </div>
+            </div>
+         </div>
+    </header>
+    <!-- ====== End Header ====== -->
+
+    
+
+    <!-- ====== Hero ====== -->
+    <section id="hero" class="py-10 lg:pt-16 lg:pb-15">
+        <div class="container">
+            <div class="flex flex-wrap">
+                <div class="w-full lg:w-6/12">
+                    <h1 class="font-poppins font-bold text-4xl leading-snug mb-3 sm:text-[42px] lg:text-[40px] xl:text-[42px]">跨入<span class="text-sky-500">網頁製作</span>領域</h1>
+                    <h1 class="font-poppins font-bold text-4xl leading-snug mb-3 sm:text-[42px] lg:text-[40px] xl:text-[42px]">努力學程式語言</h1>
+                    
+                    <p class="max-w-[480px] text-slate-600 mb-8">先前在新竹科學園區當IT網管, 學到初階程式語言, 目前立志學會建置網頁.</p>
+
+                    <!-- <div class="flex flex-col gap-5 lg:flex-row">
+                        <button class="py-2 px-8 rounded-lg shadow-md bg-sky-500 hover:bg-sky-600 text-sky-50 font-bold duration-200">Get Started</button>
+
+                        <button class="py-2 px-8 rounded-lg shadow text-sky-500 font-bold hover:bg-slate-100 duration-200">Register Now</button>
+                    </div> -->
+                    <div class="flex flex-wrap justify-center gap-5 mt-6 lg:justify-start">
+                        <img class="h-20 shadow rounded-lg cursor-pointer hover:scale-95 duration-200" src="./images/kite_flying.png" alt="">
+                        <img class="h-20 shadow rounded-lg cursor-pointer hover:scale-95 duration-200" src="./images/running.png" alt="">
+                        <img class="h-20 shadow rounded-lg cursor-pointer hover:scale-95 duration-200" src="./images/origami.png" alt="">
+                        <img class="h-20 shadow rounded-lg cursor-pointer hover:scale-95 duration-200" src="./images/movie.png" alt="">
+                    </div>
+                </div>
+
+                <!-- <div class="border hidden lg:block lg:w-1/12"></div> -->
+
+                <div class=" w-full mt-10 lg:mt-0 lg:my-auto  lg:w-6/12">
+                    <img class="h-screen max-h-[50vh] object-cover mx-auto rounded-lg" src="./images/wilson.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ====== End Hero ====== -->
+
+    
+
+    <!-- ====== Features ====== -->
+    <section id="features" class="py-10 scroll-mt-16 lg:py-15">
+        <div class="container">
+            <p class="font-poppins text-sky-500 font-semibold">我的興趣</p>
+            <h2 class="font-poppins text-2xl font-semibold mb-5 md:text-3xl lg:text-4xl">摺紙藝術</h2>
+            
+            <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3">   
+                <!-- Card-1 -->
+                <div class="duration-300 hover:scale-95">
+                    <div class="max-h-52 overflow-hidden  rounded-t-xl">
+                        <img class="aspect-square object-cover" src="./images/origami.jpg" alt="">  
+                    </div>
+                    <div class="rounded-b-xl shadow-md px-5 pb-5 pt-3">
+                        <div>
+                            <!-- <a class="py-1 px-3 bg-sky-50 rounded-md text-sm text-slate-800 mr-2" href="#">Services</a> -->
+                            <p class="font-medium capitalize text-slate-800 pt-4 hover:text-sky-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                        </div>
+                        <br>
+                        <div class="flex items-center">
+                            <img class="w-10 h-10 object-cover mr-3 rounded-full" src="./images/origami.jpg" alt="">
+                            <div>
+                                <p class="text-base font-semibold capitalize text-slate-600">方塊花</p>
+                                <p class="text-xs text-slate-400">Web Designer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card-2 -->
+                <div class="duration-300 hover:scale-95">
+                    <div class="max-h-52 overflow-hidden rounded-t-xl">
+                        <img class="aspect-square object-cover" src="./images/origami1.jpg" alt="">  
+                    </div>
+                    <div class="rounded-b-xl shadow-md px-5 pb-5 pt-3">
+                        <div>
+                            <!-- <a class="py-1 px-3 bg-sky-50 rounded-md text-sm text-slate-800 mr-2" href="#">Services</a> -->
+                            <p class="font-medium capitalize text-slate-800 pt-4 hover:text-sky-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                        </div>
+                        <br>
+                        <div class="flex items-center">
+                            <img class="w-10 h-10 object-cover mr-3 rounded-full" src="./images/origami1.jpg" alt="">
+                            <div>
+                                <p class="text-base font-semibold capitalize text-slate-600">花塔</p>
+                                <p class="text-xs text-slate-400">Web Designer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card-3 -->
+                <div class="duration-300 hover:scale-95">
+                    <div class="max-h-52 overflow-hidden rounded-t-xl">
+                        <img class="aspect-square object-cover" src="./images/origami2.jpg" alt="">  
+                    </div>
+                    <div class="rounded-b-xl shadow-md px-5 pb-5 pt-3">
+                        <div>
+                            <!-- <a class="py-1 px-3 bg-sky-50 rounded-md text-sm text-slate-800 mr-2" href="#">Services</a> -->
+                            <!-- <a class="py-1 px-3 bg-sky-50 rounded-md text-sm text-slate-800 mr-2" href="#">Design</a> -->
+                            <p class="font-medium capitalize text-slate-800 pt-4 hover:text-sky-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                        </div>
+                        <br>
+                        <div class="flex items-center">
+                            <img class="w-10 h-10 object-cover mr-3 rounded-full" src="./images/origami2.jpg" alt="">
+                            <div>
+                                <p class="text-base font-semibold capitalize text-slate-600">烏龜</p>
+                                <p class="text-xs text-slate-400">Web Designer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- <div class="container">
+            <p class="font-poppins text-sky-500 font-semibold">我的興趣</p>
+            <h2 class="font-poppins text-2xl font-semibold mb-5 md:text-3xl lg:text-4xl">摺紙藝術</h2>
+            <div class="lg:flex">
+                <div class="w-full mb-5 lg:mb-0 lg:w-5/12">
+                    <img class="h-screen max-h-[50vh] w-full  object-cover mx-auto rounded-lg " src="./images/origami.jpg" alt="">
+                </div>
+
+                <div class="hidden lg:block lg:w-1/12"></div>
+
+                <div class="lg:w-6/12 border">
+                    <p class="text-slate-600 mb-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur error eligendi natus quisquam autem dolores?</p>
+                    <p class="text-slate-600 text-lg mb-5">摺紙（英語：Origami）是摺或疊紙張的藝術，把紙張摺出各種特定的形狀和花樣，可能是一張紙的作品，也可能是二張以上紙張的作品</p>
+                    <button class="w-full py-2 px-8 rounded-lg shadow-md  hover:bg-slate-100 text-sky-500  duration-200 lg:w-auto">我的作品</button>
+
+                    <div class="space-y-10 py-10 text-center lg:flex lg:justify-evenly lg:space-y-0  ">
+                        <div class="rounded-lg shadow-lg py-2 lg:px-8">
+                            <img class="w-12 border mx-auto mb-3 rounded-full" src="./images/origami1.jpg" alt="">
+                            <p class="font-semibold">Web Design</p>
+                            <p class="text-base text-sky-500">Learn more</p>
+                        </div>
+                        <div class="rounded-lg shadow-lg py-2 lg:px-8">
+                            <img class="w-16 border mx-auto mb-3" src="./images/origami2.jpg" alt="">
+                            <p class="font-semibold">Automation</p>
+                            <p class="text-base text-sky-500">Learn more</p>
+                        </div>
+                        <div class="rounded-lg shadow-lg py-2 lg:px-8">
+                            <img class="w-16 border mx-auto mb-3" src="./images/origami3.jpg" alt="">
+                            <p class="font-semibold">Infographics</p>
+                            <p class="text-base text-sky-500">Learn more</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    </section>
+    <!-- ====== End Features ====== -->
+
+    
+    <!-- ====== About ====== -->
+    <section id="about" class="py-10 scroll-mt-16 lg:py-15">
+        <div class="container">
+            <p class="font-poppins text-sky-500 font-semibold">放風箏</p>
+            <h2 class="font-poppins text-2xl font-semibold mb-5 md:text-3xl lg:text-4xl">新竹南寮漁港</h2>
+            <div class="lg:flex">
+                <div class="lg:w-6/12">
+                    <p class="text-slate-600 text-lg">「南寮漁港」是一個放風箏的好所在，有風力超強的風和一大片無障礙的空地。景點包含:</p>
+
+                    <div class="py-5">
+                        <div class="flex items-center py-2 rounded hover:bg-sky-200">
+                            <div class=" bg-sky-500 text-sky-50 h-[35px] w-[35px] min-w-[35px] grid place-items-center rounded-full"><i class="ri-briefcase-4-line"></i></div>
+                            <p class="text-slate-500 text-lg ml-4">漁產直銷中心吃海鮮, 波光市集美食街</p>
+                        </div>
+                        <div class="flex items-center py-2 rounded hover:bg-sky-200">
+                            <div class="bg-sky-500 text-sky-50 h-[35px] w-[35px] min-w-[35px] grid place-items-center rounded-full"><i class="ri-box-3-line"></i></div>
+                            <p class="text-slate-500 text-lg ml-4">親子沙灘戲水區, 室內溜滑梯</p>
+                        </div>
+                        <div class="flex items-center py-2 rounded hover:bg-sky-200">
+                            <div class="bg-sky-500 text-sky-50 h-[35px] w-[35px] min-w-[35px] grid place-items-center rounded-full"><i class="ri-mail-open-line"></i></div>
+                            <p class="text-slate-500 text-lg ml-4">南寮魚鱗天梯, 希臘風藍白建築</p>
+                        </div>
+                    </div>
+
+                    <button class="w-full py-2 px-8 rounded-lg shadow-md bg-sky-500 hover:bg-sky-600 active:bg-sky-400 text-sky-50 text-lg duration-200 lg:w-auto">
+                        <a  href="https://hsinchucitymuseum.hccg.gov.tw/home/zh-tw/landmark/1449" target="_blank">
+                            <div class="flex items-center justify-center">
+                                <p>服務中心</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                                </svg>
+                            </div>
+                        </a>
+                    </button>
+
+
+                    
+
+                    
+                    <!-- <button class="w-full py-2 px-8 rounded-lg shadow-md bg-sky-500 hover:bg-sky-600 text-sky-50 text-lg duration-200 lg:w-auto">服務中心</button> -->
+                </div>
+
+                <div class="hidden lg:block lg:w-1/12"></div>
+
+                <div class="w-full mt-16 shadow-lg lg:mt-0 lg:w-5/12">
+                    <img class="h-screen max-h-[50vh] w-full  object-cover mx-auto rounded-lg " src="./images/nan_liao.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ====== End About ====== -->
+
+
+    <!-- ====== Service ====== -->
+    <section id="services" class="py-10 scroll-mt-16 lg:py-15">
+        <div class="container text-center">
+            <p class="font-poppins text-sky-500 font-semibold">在家休閒</p>
+            <h2 class="font-poppins text-2xl font-semibold mb-5 md:text-3xl lg:text-4xl">2025 推薦影劇</h2>
+            <!-- <p class="text-slate-600">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur error eligendi natus quisquam autem dolores?</p> -->
+
+            <div class="grid gap-6 mt-10 sm:grid-cols-2 md:grid-cols-3 xl:gap-8">
+
+
+                <div class="relative h-screen max-h-[30vh] hover:scale-105 duration-300 shadow-lg">
+                    <img class="h-full w-full object-cover rounded-lg " src="./images/movie_companion.png" alt="">
+                    <div class="absolute bottom-0 flex flex-wrap py-1 px-2">
+                        <p class="bg-slate-600/70 rounded-full px-2 text-sm text-white mr-2">驚悚愛情</p>
+                    </div>
+                </div>
+                <div class="relative h-screen max-h-[30vh] hover:scale-105 duration-300 shadow-lg">
+                    <img class="h-full w-full object-bottom object-cover rounded-lg " src="./images/movie_den_of_thieves.png" alt="">
+                    <div class="absolute bottom-0 flex flex-wrap py-1 px-2">
+                        <p class="bg-slate-600/70 rounded-full px-2 text-sm text-white mr-2">動作犯罪</p>
+                        <p class="bg-slate-600/70 rounded-full px-2 text-sm text-white mr-2">驚險戲劇</p>
+                    </div>
+                </div>
+                <div class="relative h-screen max-h-[30vh] hover:scale-105 duration-300 shadow-lg">
+                    <img class="h-full w-full object-bottom rounded-lg " src="./images/movie_goodcop_badcop.png" alt="">
+                    <div class="absolute bottom-0 flex flex-wrap py-1 px-2">
+                        <p class="bg-slate-600/70 rounded-full px-2 text-sm text-white mr-2">喜劇偵探</p>
+                    </div>
+                </div>
+                <div class="relative h-screen max-h-[30vh] hover:scale-105 duration-300 shadow-lg">
+                    <img class="h-full w-full object-bottom object-cover rounded-lg " src="./images/movie_grosse_pointe_garden_society.png" alt="">
+                    <div class="absolute bottom-0 flex flex-wrap py-1 px-2">
+                        <p class="bg-slate-600/70 rounded-full px-2 text-sm text-white mr-2">戲劇犯罪</p>
+                        <p class="bg-slate-600/70 rounded-full px-2 text-sm text-white mr-2">懸疑</p>
+                    </div>
+                </div>
+                <div class="relative h-screen max-h-[30vh] hover:scale-105 duration-300 shadow-lg">
+                    <img class="h-full w-full object-bottom object-cover rounded-lg " src="./images/movie_the_gorge.png" alt="">
+                    <div class="absolute bottom-0 flex flex-wrap py-1 px-2">
+                        <p class="bg-slate-600/70 rounded-full px-2 text-sm text-white mr-2">動作科幻</p>
+                        <p class="bg-slate-600/70 rounded-full px-2 text-sm text-white mr-2">黑暗浪漫</p>
+                        <p class="bg-slate-600/70 rounded-full px-2 text-sm text-white mr-2">恐怖</p>
+                    </div>
+                </div>
+                <div class="relative h-screen max-h-[30vh] hover:scale-105 duration-300 shadow-lg">
+                    <img class="h-full w-full object-bottom rounded-lg " src="./images/movie_the_recruit.png" alt="">
+                    <div class="absolute bottom-0 flex flex-wrap py-1 px-2">
+                        <p class="bg-slate-600/70 rounded-full px-2 text-sm text-white mr-2">動作間諜</p>
+                        <p class="bg-slate-600/70 rounded-full px-2 text-sm text-white mr-2">
+                            驚險戲劇</p>
+                    </div>
+                </div>
+
+                <!-- <div class="h-screen max-h-[30vh] border">
+                    <img class="h-full w-full object-cover rounded-lg " src="./images/movie_companion.png" alt="">
+                </div> -->
+
+                <!-- <div class="h-screen bg-[url('/images/movie_companion.png')]"></div> -->
+
+
+
+                <!-- <div class="max-h-52 overflow-hidden rounded-xl">
+                    <img class=" object-cover  rounded-xl" src="./images/movie_companion.png" alt="">  
+                </div>
+                <div class="max-h-52 overflow-hidden rounded-xl">
+                    <img class=" object-cover  rounded-xl" src="./images/movie_den_of_thieves.png" alt="">  
+                </div>
+                <div class="max-h-52 overflow-hidden rounded-xl">
+                    <img class=" object-cover  rounded-xl" src="./images/movie_goodcop_badcop.png" alt="">  
+                </div>
+                <div class="max-h-52 overflow-hidden rounded-xl">
+                    <img class=" object-cover  rounded-xl" src="./images/movie_grosse_pointe_garden_society.png" alt="">  
+                </div>
+                <div class="max-h-52 overflow-hidden rounded-xl">
+                    <img class=" object-cover  rounded-xl" src="./images/movie_the_gorge.png" alt="">  
+                </div>
+                <div class="max-h-52 overflow-hidden rounded-xl">
+                    <img class=" object-cover  rounded-xl" src="./images/movie_the_recruit.png" alt="">  
+                </div> -->
+                <!-- <div class="h-screen max-h-[10vh] border">
+                    <img class="h-full w-full object-cover rounded-lg " src="./images/faq.png" alt="">
+                </div> -->
+
+                <!-- <div class="group p-5 border hover:bg-sky-500 h-full rounded-lg bg-[url('/images/movie_companion.png')]">
+                    <img src="./images/movie_companion.png" alt="">
+                </div> -->
+                <!-- <div class="p-5 border bg-sky-500 rounded-lg">
+                    <div class=" mb-2 text-white"><i class="ri-puzzle-line text-6xl"></i></div>
+                    <p class="font-bold text-xl text-white">Crafted for Startups</p>
+                    <p class=" text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div> -->
+                <!-- <div class="group p-5 border bg-white hover:bg-sky-500 rounded-lg">
+                    <div class="text-sky-500 mb-2 group-hover:text-white"><i class="ri-speed-up-line text-6xl"></i></div>
+                    <p class="font-bold text-xl group-hover:text-white">Crafted for Startups</p>
+                    <p class="text-slate-600 group-hover:text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe accusamus nihil veritatis ad. Odit, veritatis!</p>
+                </div> -->
+                <!-- <div class="group p-5 border bg-white hover:bg-sky-500 rounded-lg">
+                    <div class="text-sky-500 mb-2 group-hover:text-white"><i class="ri-vip-diamond-line text-6xl"></i></div>
+                    <p class="font-bold text-xl group-hover:text-white">Crafted for Startups</p>
+                    <p class="text-slate-600 group-hover:text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe accusamus nihil veritatis ad. Odit, veritatis!</p>
+                </div> -->
+                <!-- <div class="group p-5 border bg-white hover:bg-sky-500 rounded-lg">
+                    <div class="text-sky-500 mb-2 group-hover:text-white"><i class="ri-archive-drawer-line text-6xl"></i></div>
+                    <p class="font-bold text-xl group-hover:text-white">Crafted for Startups</p>
+                    <p class="text-slate-600 group-hover:text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe accusamus nihil veritatis ad. Odit, veritatis!</p>
+                </div> -->
+                <!-- <div class="group p-5 border bg-white hover:bg-sky-500 rounded-lg">
+                    <div class="text-sky-500 mb-2 group-hover:text-white"><i class="ri-download-cloud-line text-6xl"></i></div>
+                    <p class="font-bold text-xl group-hover:text-white">Crafted for Startups</p>
+                    <p class="text-slate-600 group-hover:text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== End Service ====== -->
+
+
+    <!-- ====== FAQ ====== -->
+    <section id="faq" class="py-10 scroll-mt-16 lg:py-15">
+        <div class="container">
+            <p class="font-poppins text-sky-500 font-semibold">問答</p>
+            <h2 class="font-poppins text-2xl font-semibold mb-5 md:text-3xl lg:text-4xl">你了解科學嗎?</h2>
+            <div class="lg:flex">
+                <div class="h-screen max-h-[50vh] lg:w-5/12">
+                    <img class="h-full w-full object-cover rounded-lg " src="./images/science.jpg" alt="">
+                </div>
+
+                <div class="hidden lg:block lg:w-1/12"></div>
+
+                <div class="w-full mt-16 lg:mt-0 lg:w-6/12">
+                    <ul class="selectSection space-y-5">
+                        <li class="">
+                            <button class="py-4 px-8 bg-sky-100 text-slate-600 text-lg rounded-lg w-full flex items-center justify-between hover:bg-sky-200" data-number="1">
+                                <p class="text-left">生物有什麼作用需要生存嗎？</p>
+                                <span class="inline-block">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 text-sky-500">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="m9 12.75 3 3m0 0 3-3m-3 3v-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                    </svg>
+                                </span>
+                            </button>
+                              
+                            <p class="hidden content pt-6 px-4 text-slate-500 text-base leading-relaxed" data-number="1">地球上的所有生命都需要一些基本的生存的東西。這些是食物，水、光、空氣、庇護所和穩定的環境溫度。有時候，生活可以沒有這些東西之一也能生存，例如，在一個黑暗的山洞裡。</p>
+                        </li>
+
+                        <li class="">
+                            <button class="py-4 px-8 bg-sky-100 text-slate-600 text-lg rounded-lg w-full flex items-center justify-between hover:bg-sky-200" data-number="2">
+                                <p class="text-left">我的是什麼身體由什麼組成？</p>
+                                <span class="inline-block">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 text-sky-500">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="m9 12.75 3 3m0 0 3-3m-3 3v-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                    </svg>
+                                </span>
+                            </button>
+                              
+                            <p class="hidden content pt-6 px-4 text-slate-500 text-base leading-relaxed" data-number="2">身體裡的一切都是由稱為細胞的微小部分。很多細胞連接在一起形成紙巾。紙巾作為器官一起工作。機關加盟一起在系統中。一切都有一項保持身體運轉的工作。</p>
+                        </li>
+
+                        <li class="">
+                            <button class="py-4 px-8 bg-sky-100 text-slate-600 text-lg rounded-lg w-full flex items-center justify-between hover:bg-sky-200" data-number="3">
+                                <p class="text-left">一切是什麼由什麼製成？</p>
+                                <span class="inline-block">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 text-sky-500">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="m9 12.75 3 3m0 0 3-3m-3 3v-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                    </svg>
+                                </span>
+                            </button>
+                              
+                            <p class="hidden content pt-6 px-4 text-slate-500 text-base leading-relaxed" data-number="3">從最小的昆蟲到巨大的恆星，宇宙中的一切都是由稱為原子的微小顆粒。原子是太小了，我們甚至看不到它們。它們包含較小的稱為質子的粒子，中子和電子。</p>
+                        </li>
+
+                        <li class="">
+                            <button class="py-4 px-8 bg-sky-100 text-slate-600 text-lg rounded-lg w-full flex items-center justify-between hover:bg-sky-200" data-number="4">
+                                <p class="text-left">能量去哪了？</p>
+                                <span class="inline-block">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 text-sky-500">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="m9 12.75 3 3m0 0 3-3m-3 3v-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                    </svg>
+                                </span>
+                            </button>
+                              
+                            <p class="hidden content pt-6 px-4 text-slate-500 text-base leading-relaxed" data-number="4">能量無法被創造或被摧毀——它只是從將一種能量轉換為另一種能量。已儲存我們吃的食物中的能量發生變化轉化為我們體內的運動能量。水中的運動能量可以改變轉化為燈泡中的電能。</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ====== End FAQ ====== -->
+
+
+    <!-- ====== Portfolio ====== -->
+    <section id="portfolio" class="py-10 scroll-mt-16 lg:py-15">
+        <div class="container text-center">
+            <p class="font-poppins text-sky-500 font-semibold">亞洲自然奇觀</p>
+            <h2 class="font-poppins text-2xl font-semibold mb-5 md:text-3xl lg:text-4xl">必去國家公園</h2>
+            <p class="text-slate-600 lg:px-40">「國家公園」是指具有國家代表性之自然區域或⼈文史蹟。自1872年美國設立世界上第⼀座國家公園：黃石國家公園（Yellowstone National Park）起，迄今全球已有超過3,800座的國家公園。</p>
+
+            <div class="flex flex-col gap-5 mt-10">
+                <!-- column-1 -->
+                <div class="grid gap-5 sm:grid-cols-2 md:grid-cols-4">
+                    <div class="group relative h-40 rounded-lg  overflow-hidden lg:h-52">
+                        <img class="w-full h-full object-cover duration-300 group-hover:scale-125" src="./images/zhangjiajie_china.jpg" alt="">
+                        <div class="absolute -bottom-60 px-3 pt-10 pb-4 flex items-center justify-between w-full cursor-pointer bg-gradient-to-t from-slate-800 group-hover:bottom-0 duration-300">
+                            <p class="text-white text-sm font-semibold text-left">張家界<span class="block text-xs text-slate-300 text-left">湖南省西北部, 中國</span></p>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-7 text-sky-500 p-1.5 bg-white rounded-full">
+                                <path d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="group relative h-40 rounded-lg  overflow-hidden lg:h-52">
+                        <img class="w-full h-full object-cover duration-300 group-hover:scale-125" src="./images/komodo_indonesia.jpg" alt="">
+                        <div class="absolute -bottom-60 px-3 pt-10 pb-4 flex items-center justify-between w-full cursor-pointer bg-gradient-to-t from-slate-800 group-hover:bottom-0 duration-300">
+                            <p class="text-white text-sm font-semibold text-left">科莫多國家公園<span class="block text-xs text-slate-300 text-left">峇里島, 印尼</span></p>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-7 text-sky-500 p-1.5 bg-white rounded-full">
+                                <path d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="group relative h-40 rounded-lg  overflow-hidden lg:h-52 md:col-span-2">
+                        <img class="w-full h-full object-cover duration-300 group-hover:scale-125" src="./images/naejangsan_korea.jpg" alt="">
+                        <div class="absolute -bottom-60 px-3 pt-10 pb-4 flex items-center justify-between w-full cursor-pointer bg-gradient-to-t from-slate-800 group-hover:bottom-0 duration-300">
+                            <p class="text-white text-sm font-semibold text-left">內藏山國立公園<span class="block text-xs text-slate-300 text-left">全羅南道長城郡, 韓國</span></p>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-7 text-sky-500 p-1.5 bg-white rounded-full">
+                                <path d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- column-2 -->
+                <div class="grid gap-5 sm:grid-cols-2 md:grid-cols-3">
+                    <div class="group relative h-40 rounded-lg  overflow-hidden lg:h-52 md:col-span-2">
+                        <img class="w-full h-full object-cover duration-300 group-hover:scale-125" src="./images/guilin_and_lijuiang_river_china3.jpg" alt="">
+                        <div class="absolute -bottom-60 px-3 pt-10 pb-4 flex items-center justify-between w-full cursor-pointer bg-gradient-to-t from-slate-800 group-hover:bottom-0 duration-300">
+                            <p class="text-white text-sm font-semibold text-left">桂林漓江<span class="block text-xs text-slate-300 text-left">廣西, 中國</span></p>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-7 text-sky-500 p-1.5 bg-white rounded-full">
+                                <path d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="group relative h-40 rounded-lg  overflow-hidden lg:h-52">
+                        <img class="w-full h-full object-cover duration-300 group-hover:scale-125" src="./images/khao_sok_thailand.jpg" alt="">
+                        <div class="absolute -bottom-60 px-3 pt-10 pb-4 flex items-center justify-between w-full cursor-pointer bg-gradient-to-t from-slate-800 group-hover:bottom-0 duration-300">
+                            <p class="text-white text-sm font-semibold text-left" >考索國家公園<span class="block text-xs text-slate-300 text-left">素叻他尼, 泰國</span></p>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-7 text-sky-500 p-1.5 bg-white rounded-full">
+                                <path d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z" />
+                            </svg>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <!-- column-3 -->
+                <div class="grid gap-5 sm:grid-cols-2 md:grid-cols-4">
+                    <div class="group relative h-40 rounded-lg  overflow-hidden lg:h-52">
+                        <img class="w-full h-full object-cover duration-300 group-hover:scale-125" src="./images/fuji_hakone_izu_japan.jpg" alt="">
+                        <div class="absolute -bottom-60 px-3 pt-10 pb-4 flex items-center justify-between w-full cursor-pointer bg-gradient-to-t from-slate-800 group-hover:bottom-0 duration-300">
+                            <p class="text-white text-sm font-semibold text-left">富士箱根伊豆國立公園<span class="block text-xs text-slate-300 text-left">山梨縣, 日本</span></p>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-7 text-sky-500 p-1.5 bg-white rounded-full">
+                                <path d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="group relative h-40 rounded-lg  overflow-hidden lg:h-52">
+                        <img class="w-full h-full object-cover duration-300 group-hover:scale-125" src="./images/jiuzhaigou_valley.jpg" alt="">
+                        <div class="absolute -bottom-60 px-3 pt-10 pb-4 flex items-center justify-between w-full cursor-pointer bg-gradient-to-t from-slate-800 group-hover:bottom-0 duration-300">
+                            <p class="text-white text-sm font-semibold text-left">九寨溝<span class="block text-xs text-slate-300 text-left">四川省, 中國</span></p>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-7 text-sky-500 p-1.5 bg-white rounded-full">
+                                <path d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="group relative h-40 rounded-lg  overflow-hidden lg:h-52 md:col-span-2">
+                        <img class="w-full h-full object-cover duration-300 group-hover:scale-125" src="./images/phong_nha-ke_bang_vietnam.jpg" alt="">
+                        <div class="absolute -bottom-60 px-3 pt-10 pb-4 flex items-center justify-between w-full cursor-pointer bg-gradient-to-t from-slate-800 group-hover:bottom-0 duration-300">
+                            <p class="text-white text-sm font-semibold text-left">峰牙-己榜國家公園<span class="block text-xs text-slate-300 text-left">廣平省布澤縣, 越南</span></p>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-7 text-sky-500 p-1.5 bg-white rounded-full">
+                                <path d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ====== End Portfolio ====== -->
+
+
+    <!-- ====== Blog ====== -->
+    <!-- <section id="about" class="py-10 lg:py-15">
+        <div class="container">
+            <p class="font-poppins text-sky-500 font-semibold">Our Blog</p>
+            <h2 class="font-poppins text-2xl font-semibold mb-5 md:text-3xl lg:text-4xl">From Our Latest Blog</h2>
+            
+            <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3">   
+                Card-1
+                <div class="duration-300 hover:scale-95">
+                    <div class="max-h-52 overflow-hidden  rounded-t-xl">
+                        <img class="aspect-square object-cover" src="./images/blog/blog-1.png" alt="">  
+                    </div>
+                    <div class="rounded-b-xl shadow-md px-5 pb-5 pt-3">
+                        <div>
+                            <a class="py-1 px-3 bg-sky-50 rounded-md text-sm text-slate-800 mr-2" href="#">Services</a>
+                            <p class="font-medium capitalize text-slate-800 pt-4 hover:text-sky-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                        </div>
+                        <br>
+                        <div class="flex items-center">
+                            <img class="w-10 h-10 object-cover mr-3 rounded-full" src="./images/blog/user-1.png" alt="">
+                            <div>
+                                <p class="text-sm font-semibold capitalize text-slate-600">Paterson Golden</p>
+                                <p class="text-xs text-slate-400">Web Designer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                Card-2
+                <div class="duration-300 hover:scale-95">
+                    <div class="max-h-52 overflow-hidden rounded-t-xl">
+                        <img class="aspect-square object-cover" src="./images/blog/blog-2.png" alt="">  
+                    </div>
+                    <div class="rounded-b-xl shadow-md px-5 pb-5 pt-3">
+                        <div>
+                            <a class="py-1 px-3 bg-sky-50 rounded-md text-sm text-slate-800 mr-2" href="#">Services</a>
+                            <p class="font-medium capitalize text-slate-800 pt-4 hover:text-sky-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                        </div>
+                        <br>
+                        <div class="flex items-center">
+                            <img class="w-10 h-10 object-cover mr-3 rounded-full" src="./images/blog/user-2.png" alt="">
+                            <div>
+                                <p class="text-sm font-semibold capitalize text-slate-600">Paterson Golden</p>
+                                <p class="text-xs text-slate-400">Web Designer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                Card-3
+                <div class="duration-300 hover:scale-95">
+                    <div class="max-h-52 overflow-hidden rounded-t-xl">
+                        <img class="aspect-square object-cover" src="./images/blog/blog-3.png" alt="">  
+                    </div>
+                    <div class="rounded-b-xl shadow-md px-5 pb-5 pt-3">
+                        <div>
+                            <a class="py-1 px-3 bg-sky-50 rounded-md text-sm text-slate-800 mr-2" href="#">Services</a>
+                            <a class="py-1 px-3 bg-sky-50 rounded-md text-sm text-slate-800 mr-2" href="#">Design</a>
+                            <p class="font-medium capitalize text-slate-800 pt-4 hover:text-sky-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                        </div>
+                        <br>
+                        <div class="flex items-center">
+                            <img class="w-10 h-10 object-cover mr-3 rounded-full" src="./images/blog/user-3.png" alt="">
+                            <div>
+                                <p class="text-sm font-semibold capitalize text-slate-600">Paterson Golden</p>
+                                <p class="text-xs text-slate-400">Web Designer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- ====== End Blog ====== -->
+
+
+    <!-- ====== Contact ====== -->
+    <section id="contact" class="py-10 scroll-mt-16 lg:py-15">
+        <div class="container">
+            <p class="font-poppins text-sky-500 font-semibold">Contact Us</p>
+            <h2 class="font-poppins text-2xl font-semibold mb-5 md:text-3xl lg:text-4xl">Get in Touch wiht us</h2>
+            <div class="lg:flex">
+                <div class="lg:w-6/12">
+                    <p class="text-slate-600">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur error eligendi natus quisquam autem dolores?</p>
+
+                    <div class="py-5">
+                        <ul class="max-w-md space-y-5">
+                            <li class="flex items-center gap-4 shadow-md sm:ml-5">
+                                <div class="p-5 text-sky-500 bg-sky-50 rounded ">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="mb-1 font-bold text-slate-700">Our Location</h4>
+                                    <p class="text-slate-400">4236 Woodland Trrace, Sacramento.</p>
+                                    <p class="text-slate-400">California</p>
+                                </div>
+                            </li>
+
+                            <li class="flex items-center gap-4 shadow-md sm:ml-5">
+                                <div class="p-5 text-sky-500 bg-sky-50 rounded ">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+                                      </svg>
+                                </div>
+                                <div>
+                                    <p class="mb-1 font-bold text-slate-700">Phone Number</p>
+                                    <p>(+82)01 234 567 8912</p>
+                                </div>
+                            </li>
+
+                            <li class="flex items-center gap-4 shadow-md sm:ml-5">
+                                <div class="p-5 text-sky-500 bg-sky-50 rounded ">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                                      </svg>
+                                </div>
+                                <div>
+                                    <p class="mb-1 font-bold text-slate-700">Email Address</p>
+                                    <p class="text-slate-400">company@gmail.com</p>
+                                </div>
+                            </li>
+                    </div>
+                </div>
+
+                <div class="hidden lg:block lg:w-1/12"></div>
+
+                <div class="mt-16 lg:mt-0 lg:w-5/12">
+                    <form action="">
+                        <div class="flex flex-col justify-between">
+                            <div class="mb-6">
+                                <input class="w-full rounded-lg border border-sky-500/20 px-4 py-3 text-slate-500 focus:border-sky-500 focus:outline-none" type="text" placeholder="Your Name">
+                            </div>
+                            <div class="mb-6">
+                                <input class="w-full rounded-lg border border-sky-500/20 px-4 py-3 text-slate-500 focus:border-sky-500 focus:outline-none" type="email" placeholder="Your Email">
+                            </div>
+                            <div class="mb-6">
+                                <input class="w-full rounded-lg border border-sky-500/20 px-4 py-3 text-slate-500 focus:border-sky-500 focus:outline-none" type="password" placeholder="Your Password">
+                            </div>
+                            
+                            <div class="mb-6">
+                                <textarea class="resize-none w-full rounded-lg border border-sky-500/20 px-4 py-3 text-slate-500 focus:border-sky-500 focus:outline-none" rows="4"></textarea>
+                            </div>
+                            
+                            <button class="bg-sky-500 text-sky-50 py-3 rounded duration-300 hover:bg-sky-600" type="submit">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ====== End Contact ====== -->
+
+    
+
+    <!-- ====== Footer ====== -->
+
+    <footer id="footer" class="py-10 lg:py-15">
+        <div class="container">
+            <hr class="border-slate-100 border-2 my-4">
+            <!-- logo -->
+            <a href="#" class="flex justify-center">
+                <div class="flex items-center justify-center  px-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8 text-sky-700">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z" />
+                    </svg>
+                    <p class="font-extrabold text-3xl text-sky-700 ml-2">東山</p>  
+                </div>
+            </a>
+
+            <div class="text-center mt-5 space-x-2 text-lg">
+                <a class="nav_link" href="#features">摺紙</a>
+                <a class="nav_link" href="#about">風箏</a>
+                <a class="nav_link" href="#services">影劇</a>
+                <a class="nav_link" href="#faq">科學</a>
+                <a class="nav_link" href="#portfolio">亞洲</a>
+                <!-- <a class="nav_link" href="#">英語</a> -->
+                <a class="nav_link" href="#contact">聯繫</a>
+            </div>
+            <!-- <div class="lg:flex"> -->
+                <!-- <div class="lg:w-4/12">
+                    <div>
+                        <img class="w-[12rem]" src="./images/logo.png" alt="">
+                    </div>
+                    <p class="text-slate-600">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur error eligendi natus quisquam autem dolores?</p>
+                    <p class="text-slate-600">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur error eligendi natus quisquam autem dolores?</p>
+                </div> -->
+
+                <!-- <div class="border hidden lg:block lg:w-1/12"></div> -->
+
+                <!-- links -->
+                <!-- <div class="grid grid-cols-2 gap-5 lg:grid-cols-4 lg:w-7/12">
+                    <div>
+                        <h4 class="font-bold mb-1">Category</h4>
+                        <ul class="space-y-1">
+                            <li>News</li>
+                            <li>World</li>
+                            <li>Games</li>
+                            <li>References</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="font-bold mb-1">Business</h4>
+                        <ul class="space-y-1">
+                            <li>Web</li>
+                            <li>eCommerce</li>
+                            <li>Business</li>
+                            <li>Entertainment</li>
+                            <li>Portfolio</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="font-bold mb-1">Apples</h4>
+                        <ul class="space-y-1">
+                            <li>Media</li>
+                            <li>Brochure</li>
+                            <li>Nonprofit</li>
+                            <li>Educational</li>
+                            <li>Projects</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="font-bold mb-1">Cherry</h4>
+                        <ul class="space-y-1">
+                            <li>Infopreneur</li>
+                            <li>Personal</li>
+                            <li>Wiki</li>
+                            <li>Forum</li>
+                        </ul>
+                    </div>
+                </div> -->
+            <!-- </div> -->
+            <hr class="border-slate-100 border-2 my-4">
+            <!-- copyright -->
+            <div class="">
+                <p class="text-center">&copy; Copyright 2025 ZED.zahidul All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ====== End Footer ====== -->
+
+
+    
+
+    
+    <script src="./js/main.js"></script>
+</body>
+</html>
