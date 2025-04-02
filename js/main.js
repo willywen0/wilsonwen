@@ -42,3 +42,19 @@ for (let button of Buttons) {
         }
     })
 }
+
+
+/*~~~~~~~~~~~~~~~~~~~~ QRcode Modal ~~~~~~~~~~~~~~~~~~~~*/ 
+function showDialog() {
+    let dialog = document.getElementById("dialog");
+    
+    dialog.classList.remove("hidden");
+    dialog.classList.add("flex");
+}
+
+function hideDialog() {
+    let dialog = document.getElementById("dialog");
+
+    dialog.classList.remove("flex");
+    dialog.classList.add("hidden");
+}
